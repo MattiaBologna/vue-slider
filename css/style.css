@@ -4,8 +4,31 @@
     box-sizing: border-box;
 }
 
-.container {
+ul, ol, menu {
+    list-style: none;
+}
+
+#app {
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.btn {
+	line-height: 40px;
+	padding: 0 24px;
+	border-radius: 999px;
+	background-color: coral;
+	color: white;
+	border: none;
+	cursor: pointer;
+}
+
+.container {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -16,6 +39,25 @@
     width: 700px;
     height: 300px;
     position: relative;
+    display: none;
+}
+
+.item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.item.active {
+    display: block;
+}
+
+.item .text {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    text-align: right;
+    color: white;
 }
 
 .item img {
@@ -26,10 +68,10 @@
 
 .item .text {
     position: absolute;
-    right: 20px;
-    bottom: 20px;
-    text-align: right;
-    color: white;
+	right: 20px;
+	bottom: 20px;
+	text-align: right;
+	color: white;
 }
 
 .thumbs {
@@ -103,3 +145,4 @@ oppure i caratteri ∧ (&and;) e ∨ (&or;)
     left: 50%;
     transform: translate(-50%) rotate(135deg);
 }
+
